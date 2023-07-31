@@ -8,6 +8,12 @@ function sumar() {
         resultadoElement.innerHTML=resultado.toString();
     }
 }
+const botonSumar= document.getElementById("siguiente");
+
+if (botonSumar != null && botonSumar !== undefined){
+    botonSumar.addEventListener("click", sumar)
+}
+
 function restar() {
     (document.getElementById("anterior") as HTMLButtonElement).value;
 
@@ -17,6 +23,12 @@ function restar() {
     if (resultadoElement !== null && resultadoElement !== undefined) {
         resultadoElement.innerHTML=resultado.toString();
     }
+}
+
+const botonRestar= document.getElementById("anterior");
+
+if (botonRestar != null && botonRestar !== undefined){
+    botonRestar.addEventListener("click", restar)
 }
 
 function reset () {
@@ -29,19 +41,27 @@ function reset () {
     }
 
 }
-const botonSumar= document.getElementById("siguiente");
-
-if (botonSumar != null && botonSumar !== undefined){
-    botonSumar.addEventListener("click", sumar)
-}
-const botonRestar= document.getElementById("anterior");
-
-if (botonRestar != null && botonRestar !== undefined){
-    botonRestar.addEventListener("click", restar)
-}
 
 const botonReset= document.getElementById("reset");
 
 if (botonReset != null && botonReset !== undefined){
     botonReset.addEventListener("click", reset)
+}
+
+function numero () {
+    const turno = (document.getElementById("turno") as HTMLInputElement)
+    .value;
+
+    resultado = parseInt(turno)
+
+    const resultadoElement= document.getElementById("resultado");
+    if (resultadoElement !== null && resultadoElement !== undefined) {
+        resultadoElement.innerHTML=resultado.toString();
+    }
+}
+
+const botonOk= document.getElementById("enter-turno");
+
+if (botonOk != null && botonOk !== undefined){
+    botonOk.addEventListener("click", numero)
 }

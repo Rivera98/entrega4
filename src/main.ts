@@ -1,9 +1,7 @@
 let resultado = 0
 function sumar() {
-    // Leer los valores de los inputs
-    const sumando1 = (document.getElementById("siguiente") as HTMLButtonElement)
-    .value;
-     resultado = resultado +1;
+    (document.getElementById("siguiente") as HTMLButtonElement).value;
+    resultado = resultado +1;
 
     const resultadoElement= document.getElementById("resultado");
     if (resultadoElement !== null && resultadoElement !== undefined) {
@@ -11,17 +9,25 @@ function sumar() {
     }
 }
 function restar() {
-    
-    const restarUno = (document.getElementById("anterior") as HTMLButtonElement)
-    .value;
-    
+    (document.getElementById("anterior") as HTMLButtonElement).value;
+
      resultado = resultado -1;
-    
 
     const resultadoElement= document.getElementById("resultado");
     if (resultadoElement !== null && resultadoElement !== undefined) {
         resultadoElement.innerHTML=resultado.toString();
     }
+}
+
+function reset () {
+    (document.getElementById("reset") as HTMLButtonElement).value;
+
+    resultado = 0
+    const resultadoElement= document.getElementById("resultado");
+    if (resultadoElement !== null && resultadoElement !== undefined) {
+        resultadoElement.innerHTML=resultado.toString();
+    }
+
 }
 const botonSumar= document.getElementById("siguiente");
 
@@ -29,3 +35,13 @@ if (botonSumar != null && botonSumar !== undefined){
     botonSumar.addEventListener("click", sumar)
 }
 const botonRestar= document.getElementById("anterior");
+
+if (botonRestar != null && botonRestar !== undefined){
+    botonRestar.addEventListener("click", restar)
+}
+
+const botonReset= document.getElementById("reset");
+
+if (botonReset != null && botonReset !== undefined){
+    botonReset.addEventListener("click", reset)
+}

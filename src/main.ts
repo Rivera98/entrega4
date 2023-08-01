@@ -5,7 +5,7 @@ function sumar() {
 
     const resultadoElement= document.getElementById("resultado");
     if (resultadoElement !== null && resultadoElement !== undefined) {
-        resultadoElement.innerHTML=resultado.toString();
+        resultadoElement.innerHTML=resultado.toString().padStart(2, "0");
     }
 }
 const botonSumar= document.getElementById("siguiente");
@@ -21,7 +21,7 @@ function restar() {
 
     const resultadoElement= document.getElementById("resultado");
     if (resultadoElement !== null && resultadoElement !== undefined) {
-        resultadoElement.innerHTML=resultado.toString();
+        resultadoElement.innerHTML=resultado.toString().padStart(2, "0");
     }
 }
 
@@ -37,7 +37,7 @@ function reset () {
     resultado = 0
     const resultadoElement= document.getElementById("resultado");
     if (resultadoElement !== null && resultadoElement !== undefined) {
-        resultadoElement.innerHTML=resultado.toString();
+        resultadoElement.innerHTML=resultado.toString().padStart(2, "0");
     }
 
 }
@@ -56,7 +56,7 @@ function numero () {
 
     const resultadoElement= document.getElementById("resultado");
     if (resultadoElement !== null && resultadoElement !== undefined) {
-        resultadoElement.innerHTML=resultado.toString();
+        resultadoElement.innerHTML=resultado.toString().padStart(2, "0");
     }
 }
 
